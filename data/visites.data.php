@@ -26,7 +26,6 @@ function visitesData_getAll(){
     #3
     return $liste;
 }
-
 function visitesData_getNbVisitesForId($id){
 	
 	$requete = 'SELECT COUNT(visite.id) AS "NbVisites" FROM visiteur, visite WHERE visiteur.idVisite = '.$id;

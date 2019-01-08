@@ -111,7 +111,7 @@
 							<i class="fas fa-eye"></i> <span>Visites de l'entreprise</span>
 						</a>
 					</li>
-					<li>
+					</div><li>
 						<a href="../www/index.php?controle=inscription">
 							<i class="fas fa-plus"></i> <span>Requête de visite</span>
 						</a>
@@ -121,9 +121,6 @@
 		</aside>
 		<div class="content-wrapper">
 			<section class="content-header">
-				<h1>
-					<?= $titrePage ?>
-				</h1>
 			</section>
 			<section class="content">
 		

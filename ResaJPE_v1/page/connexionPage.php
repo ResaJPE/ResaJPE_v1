@@ -11,11 +11,11 @@
 
         <form action="index.php?controle=connexion&action=connecter" method="POST">
             <div class="form-group has-feedback">
-                <input type="text" name="login" class="form-control" placeholder="Identifiant">
-                <span class="glyphicon glyphicon-tag form-control-feedback"></span>
+                <input type="text" id="login" class="form-control" placeholder="Identifiant">
+                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input type="password" name="mdp" class="form-control" placeholder="Mot de passe">
+                <input type="password" id="mdp" class="form-control" placeholder="Mot de passe">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             </div>
             <div class="row">
@@ -28,22 +28,6 @@
                 </div>
                 <!-- /.col -->
             </div>
-            <?php if(isset($alerte)){ ?>
-            <br>
-            <div class="alert alert-danger alert-dismissible" style="font-size:14px;">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                <h4><i class="icon fa fa-ban"></i> Oups!</h4>
-                <?= $alerte ?>
-            </div>
-            <?php } ?>
-            <?php if(isset($_SESSION['msg_success'])){ ?>
-            <br>
-            <div class="alert alert-success alert-dismissible" style="font-size:14px;">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                <h4><i class="icon fa fa-check"></i> Bravo!</h4>
-                <?= $_SESSION['msg_success']; ?>
-            </div>
-            <?php unset($_SESSION['msg_success']); } ?>
         </form>
     </div>
     <!-- /.login-box-body -->
