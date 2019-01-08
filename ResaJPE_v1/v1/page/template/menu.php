@@ -120,4 +120,5 @@
 				<?php } ?>
 		</aside>
 		<div class="content-wrapper">
+			<?php echo 'test' ?>
 		

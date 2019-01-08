@@ -1,12 +1,14 @@
 
-	</div>
-	<div class="control-sidebar-bg"></div>
+	</div>	
 <footer class="main-footer">
+	
     <div class="pull-right hidden-xs">
       <b>Version</b> <?= Config::APPLI_VERSION ?>
     </div>
     <strong>Copyright &copy; 2019.</strong> Tous droits réservés
 </footer>
+<div class="control-sidebar-bg"></div>
+</div>
 <script src="./style/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="./style/bootstrap/dist/js/bootstrap.min.js"></script>
