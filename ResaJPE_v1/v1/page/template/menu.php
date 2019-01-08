@@ -54,6 +54,9 @@
 						<li><a href="../www/index.php?controle=reservation">Réserver une salle</a></li>
 					</ul>
 				</nav>-->
+				<?php  //var_dump($_SESSION);
+				//Si le user est un particulier
+				if($_SESSION['type'] == 1){   ?>
 				<ul class="sidebar-menu" data-widget="tree">
 					<li class="header">NAVIGATION</li>
 					<li class="active">
@@ -72,6 +75,50 @@
 						</a>
 					</li>
 				</ul>
+				<?php } 
+				//Si le user est un membre du CCI
+				elseif($_SESSION['type'] == 2){ ?>
+					<ul class="sidebar-menu" data-widget="tree">
+					<li class="header">NAVIGATION</li>
+					<li class="active">
+						<a href="../www/index.php?controle=accueil">
+							<i class="fas fa-home"></i> <span>Accueil</span>
+						</a>
+					</li>
+					<li>
+						<a href="../www/index.php?controle=visites">
+							<i class="fas fa-eye"></i> <span>Visites</span>
+						</a>
+					</li>
+					<li>
+						<a href="../www/index.php?controle=inscription">
+							<i class="fas fa-plus"></i> <span>Demandes de visite</span>
+						</a>
+					</li>
+				</ul>
+					<?php }
+					//Si le user est un le représentant d'une entreprise
+					elseif($_SESSION['type'] == 3){ ?>
+						<ul class="sidebar-menu" data-widget="tree">
+					<li class="header">NAVIGATION</li>
+					<li class="active">
+						<a href="../www/index.php?controle=accueil">
+							<i class="fas fa-home"></i> <span>Accueil</span>
+						</a>
+					</li>
+					<li>
+						<a href="../www/index.php?controle=visites">
+							<i class="fas fa-eye"></i> <span>Visites de l'entreprise</span>
+						</a>
+					</li>
+					<li>
+						<a href="../www/index.php?controle=inscription">
+							<i class="fas fa-plus"></i> <span>Requête de visite</span>
+						</a>
+					</li>
+				</ul>
+				<?php } ?>
 		</aside>
 		<div class="content-wrapper">
+			<?php echo 'test' ?>
 		

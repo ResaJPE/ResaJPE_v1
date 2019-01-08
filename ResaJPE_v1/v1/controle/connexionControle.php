@@ -18,10 +18,12 @@ function connexionControle($action) {
 
 
 function connexionControle_defaultAction($message) {
+		
     $titreOnglet=Config::APPLI_NAME.'-Connexion';
     $titrePage='Se connecter à '.Config::APPLI_NAME.' '.Config::APPLI_VERSION;
     $alerte = $message;
 	require '../page/connexionPage.php';
+
 }
 
 function connexionControle_connecterAction(){
