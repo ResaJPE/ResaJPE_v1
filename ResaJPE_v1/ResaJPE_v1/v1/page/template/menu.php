@@ -19,7 +19,7 @@
 			<nav class="navbar navbar-static-top">
 			  <!-- Sidebar toggle button-->
 			  <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-				<i class="fas fa-bars"></i>
+				  <i class="fa fa-bars"></i>
 				<span class="sr-only">Activer menu</span>
 			  </a>
 			  <!-- Navbar Right Menu -->
@@ -120,10 +120,4 @@
 				<?php } ?>
 		</aside>
 		<div class="content-wrapper">
-			<section class="content-header">
-				<h1>
-					<?= $titrePage ?>
-				</h1>
-			</section>
-			<section class="content">
 		

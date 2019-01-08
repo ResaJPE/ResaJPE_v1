@@ -17,7 +17,8 @@ function visitesData_getAll(){
     // $requete  : string
     #2
     // Mettre la requête dans une variable : aide au debug
-    $requete='SELECT entreprise_id, date, etat, service_id, etatVisite.etatVisites FROM visite, etatVisite WHERE etatVisite.id = visite.etat ORDER BY date DESC';
+    $requete='SELECT visite.id, date, etat, etatVisite.etatVisites AS "Etat", entreprise.raisonSociale AS "NomEntreprise", service.choix AS "choixService", isAccepted FROM visite, etatVisite, entreprise, service WHERE etatVisite.id = visite.etat 
+    AND visite.entreprise_id = entreprise.id AND service.id = visite.service_id ORDER BY date DESC';
 
     // Execute la requete sur la base m2l grâce à la méthode query() prévue dans la classe Connexion
     $liste=Connexion::query($requete);
@@ -25,11 +26,18 @@ function visitesData_getAll(){
     #3
     return $liste;
 }
-
-function visitesData_getCount(){
+function visitesData_getNbVisitesForId($id){
 	
-	$requete = 'SELECT COUNT(id) AS nbVisites FROM visite';
-	$result= Connexion::query($requete);
+	$requete = 'SELECT COUNT(visite.id) AS "NbVisites" FROM visiteur, visite WHERE visiteur.idVisite = '.$id;
+	$result = Connexion::query($requete);
 	return $result;
-	
+}
+
+
+function visitesData_getMaxInscrits($id){
+
+    $requete = 'SELECT nbPlacesMax FROM visite WHERE id ='.$id;
+    $result = Connexion::query($requete);
+    return $result;
+
 }
