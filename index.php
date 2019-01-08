@@ -5,6 +5,7 @@ include('../controle/connexionControle.php');
 include('../controle/accueilControle.php');
 include('../controle/inscriptionVisiteControle.php');
 include('../controle/visitesControle.php');
+include('../controle/inscriptionControle.php');
 include('../controle/parametresControle.php');
 
 
@@ -32,6 +33,9 @@ switch ($controle) {
 		accueilControle($action);
 	break;
 	case 'inscription' :
+		inscrireControle($action);
+	break;
+	case 'inscriptionVisite' :
 		inscriptionControle($action);
 	break;
 	case 'visites' :
