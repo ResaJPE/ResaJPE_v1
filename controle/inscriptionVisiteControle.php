@@ -1,11 +1,11 @@
 <?php
 
-function inscriptionControle($action) {
+function inscriptionVisiteControle($action) {
 	// Sélecteur d'actions
 	if (isset($_SESSION['id'])){
 		switch ($action) {
 			default : 
-				inscriptionControle_defaultAction();
+				inscriptionVisiteControle_defaultAction();
 			break;
 		}
 	}
@@ -15,7 +15,7 @@ function inscriptionControle($action) {
 	}
 }
 
-function inscriptionControle_defaultAction() {
+function inscriptionVisiteControle_defaultAction() {
 	if($_SESSION['type'] == 1){
     $titrePage="Inscription à une visite";
 	$titreOnglet=$titrePage;
