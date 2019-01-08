@@ -19,7 +19,7 @@
 			<nav class="navbar navbar-static-top">
 			  <!-- Sidebar toggle button-->
 			  <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-				  <i class="fa fa-bars"></i>
+				<i class="fas fa-bars"></i>
 				<span class="sr-only">Activer menu</span>
 			  </a>
 			  <!-- Navbar Right Menu -->
@@ -111,7 +111,7 @@
 							<i class="fas fa-eye"></i> <span>Visites de l'entreprise</span>
 						</a>
 					</li>
-					<li>
+					</div><li>
 						<a href="../www/index.php?controle=inscription">
 							<i class="fas fa-plus"></i> <span>Requête de visite</span>
 						</a>
@@ -120,4 +120,7 @@
 				<?php } ?>
 		</aside>
 		<div class="content-wrapper">
+			<section class="content-header">
+			</section>
+			<section class="content">
 		
